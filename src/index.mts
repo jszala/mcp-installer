@@ -113,22 +113,7 @@ function installToClaudeDesktop(
   args: string[],
   env?: string[]
 ) {
-  const configPath =
-    process.platform === "win32"
-      ? path.join(
-          os.homedir(),
-          "AppData",
-          "Roaming",
-          "Claude",
-          "claude_desktop_config.json"
-        )
-      : path.join(
-          os.homedir(),
-          "Library",
-          "Application Support",
-          "Claude",
-          "claude_desktop_config.json"
-        );
+  const configPath = "/home/jszala/.config/Claude/claude_desktop_config.json";
 
   let config: any;
   try {
